@@ -15,6 +15,7 @@
 // console.log(myDogAge);
 
 let count = 0;
+let saveEl = document.getElementById("save-el");
 
 function increment() {
   count++;
@@ -23,6 +24,21 @@ function increment() {
 }
 
 function save() {
+  let savedNum = ` ${count} - `;
+  saveEl.textContent += savedNum;
+
   console.log(`Your count is saved at ${count}`);
 }
-save;
+
+// let username = "yanni";
+
+// let message = "You have three new notificaitons";
+// let messageToUser = username + ", " + message;
+
+// console.log(messageToUser);
+
+// let name = 42;
+// let greeting = "Hi my name is";
+
+// let myGreeting = greeting + ", " + name;
+// console.log(myGreeting);
