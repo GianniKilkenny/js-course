@@ -6,17 +6,18 @@ let isAlive = true;
 
 let message = "";
 
-if (sum <= 20) {
-  message = "do you want to draw a new card lil bro?";
-} else if (sum === 21) {
-  message = "just take the bread lil bro";
-  let hasBlackJack = true;
-} else {
-  message = "damn i know yo pockets finna be hurting lil bro";
-  let isAlive = false;
+function startGame() {
+  if (sum <= 20) {
+    message = "do you want to draw a new card lil bro?";
+  } else if (sum === 21) {
+    message = "just take the bread lil bro";
+    let hasBlackJack = true;
+  } else {
+    message = "damn i know yo pockets finna be hurting lil bro";
+    let isAlive = false;
+    console.log(message);
+  }
 }
-
-console.log(message);
 
 // let age = 100;
 
