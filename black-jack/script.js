@@ -7,6 +7,8 @@ let message = "";
 
 messageEl = document.getElementById("message-el");
 sumEl = document.getElementById("sum-el");
+cardsEl = document.getElementById("cards-el");
+
 function startGame() {
   if (sum <= 20) {
     message = "do you want to draw a new card lil bro?";
@@ -19,6 +21,7 @@ function startGame() {
   }
   messageEl.textContent = message;
   sumEl.textContent = `Sum: ${sum}`;
+  cardsEl.textContent = `Cards: ${firstCard} & ${secondCard}`;
 }
 
 // let age = 100;
