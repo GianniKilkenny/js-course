@@ -16,18 +16,18 @@
 
 let count = 0;
 let saveEl = document.getElementById("save-el");
+let c = document.getElementById("count");
 
 function increment() {
   count++;
-  let c = document.getElementById("count");
   c.textContent = count;
 }
 
 function save() {
   let savedNum = ` ${count} - `;
   saveEl.textContent += savedNum;
-
-  console.log(`Your count is saved at ${count}`);
+  count = 0;
+  c.textContent = 0;
 }
 
 // let username = "yanni";
