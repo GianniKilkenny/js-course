@@ -1,0 +1,20 @@
+body {
+  padding: 30px;
+  background-color: black;
+  font-family: "Trebuchet MS";
+}
+
+h1 {
+  color: pink;
+  text-align: center;
+  font-weight: bold;
+}
+
+#message-el {
+  color: pink;
+  text-align: center;
+}
+p {
+  color: pink;
+  text-align: center;
+}
