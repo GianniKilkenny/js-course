@@ -3,9 +3,10 @@ let secondCard = 11;
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
-
 let message = "";
 
+messageEl = document.getElementById("message-el");
+sumEl = document.getElementById("sum-el");
 function startGame() {
   if (sum <= 20) {
     message = "do you want to draw a new card lil bro?";
@@ -15,8 +16,9 @@ function startGame() {
   } else {
     message = "damn i know yo pockets finna be hurting lil bro";
     let isAlive = false;
-    console.log(message);
   }
+  messageEl.textContent = message;
+  sumEl.textContent = `Sum: ${sum}`;
 }
 
 // let age = 100;
