@@ -1,20 +1,39 @@
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
-let sum = firstCard + secondCard;
+let sum = 0;
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
 let message = "";
-let cards = [firstCard, secondCard]; //ordered list of items
+let cards = []; //ordered list of items
+
+let player = {
+  name: "Gianni",
+  chips: 145,
+};
+
+let playerEl = document.getElementById("player-el");
+
+playerEl.textContent = `${player.name}: $${player.chips}`;
 
 messageEl = document.getElementById("message-el");
 sumEl = document.getElementById("sum-el");
 cardsEl = document.getElementById("cards-el");
 
 function getRandomCard() {
-  return 5;
+  let randomNumber = Math.floor(Math.random() * 13) + 1;
+  if (randomNumber === 1) {
+    return 11;
+  } else if (randomNumber < 11) {
+    return randomNumber;
+  } else {
+    return 10;
+  }
 }
 
 function startGame() {
+  isAlive = true;
+  let firstCard = getRandomCard();
+  let secondCard = getRandomCard();
+  sum = firstCard + secondCard;
+  cards = [firstCard, secondCard];
   renderGame();
 }
 
@@ -39,8 +58,13 @@ function renderGame() {
 }
 
 function newCard() {
-  let card = getRandomCard();
-  sum += card;
-  cards.push(card);
-  renderGame();
+  if (isAlive && !hasBlackJack) {
+    let card = getRandomCard();
+    sum += card;
+    cards.push(card);
+    renderGame();
+  } else {
+    message = "Sorry Lil bro the Game is over";
+    messageEl.textContent = message;
+  }
 }

@@ -119,13 +119,33 @@
 
 // A random whole number between 0 and 5 (not including 6)
 
-let floorNumber = Math.floor(3.956456);
-console.log(floorNumber);
-// Rounds the number down to the nearest whole number
+// let floorNumber = Math.floor(3.956456);
+// console.log(floorNumber);
+// // Rounds the number down to the nearest whole number
 
-function rollDice() {
-  let randomNumber = Math.floor(Math.random() * 6) + 1;
-  return randomNumber;
+// function rollDice() {
+//   let randomNumber = Math.floor(Math.random() * 6) + 1;
+//   return randomNumber;
+// }
+
+// console.log(rollDice());
+
+let hasCompletedCourse = true;
+let giversCertificate = true;
+
+if (hasCompletedCourse && giversCertificate) {
+  generateCertificate();
 }
 
-console.log(rollDice());
+function generateCertificate() {
+  console.log("Generating certificate....");
+}
+
+let hasSolvedChallenge = true;
+let hasHintsLeft = false;
+function showSolution() {
+  console.log("Showing the solution...");
+}
+if (hasSolvedChallenge || hasHintsLeft) {
+  showSolution();
+}
