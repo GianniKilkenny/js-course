@@ -10,6 +10,10 @@ messageEl = document.getElementById("message-el");
 sumEl = document.getElementById("sum-el");
 cardsEl = document.getElementById("cards-el");
 
+function getRandomCard() {
+  return 5;
+}
+
 function startGame() {
   renderGame();
 }

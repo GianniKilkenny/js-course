@@ -93,26 +93,39 @@
 //   greetingEl.textContent += ` ${sentence[i]}`;
 // }
 
-let player1Time = 102;
-let player2Time = 107;
+// let player1Time = 102;
+// let player2Time = 107;
 
-function getFastestRaceTime() {
-  if (player1Time < player2Time) {
-    return player1Time;
-  } else if (player2Time < player1Time) {
-    return player2Time;
-  } else {
-    return player1Time;
-  }
+// function getFastestRaceTime() {
+//   if (player1Time < player2Time) {
+//     return player1Time;
+//   } else if (player2Time < player1Time) {
+//     return player2Time;
+//   } else {
+//     return player1Time;
+//   }
+// }
+
+// let fastestRace = getFastestRaceTime();
+
+// console.log(fastestRace);
+
+// function totalRaceTime() {
+//   return player1Time + player2Time;
+// }
+
+// let totalTime = totalRaceTime();
+// console.log(totalTime);
+
+// A random whole number between 0 and 5 (not including 6)
+
+let floorNumber = Math.floor(3.956456);
+console.log(floorNumber);
+// Rounds the number down to the nearest whole number
+
+function rollDice() {
+  let randomNumber = Math.floor(Math.random() * 6) + 1;
+  return randomNumber;
 }
 
-let fastestRace = getFastestRaceTime();
-
-console.log(fastestRace);
-
-function totalRaceTime() {
-  return player1Time + player2Time;
-}
-
-let totalTime = totalRaceTime();
-console.log(totalTime);
+console.log(rollDice());
