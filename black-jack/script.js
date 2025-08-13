@@ -1,5 +1,5 @@
-let firstCard = 10;
-let secondCard = 9;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
@@ -19,18 +19,23 @@ function renderGame() {
     message = "do you want to draw a new card lil bro?";
   } else if (sum === 21) {
     message = "just take the bread lil bro";
-    let hasBlackJack = true;
+    hasBlackJack = true;
   } else {
     message = "damn i know yo pockets finna be hurting lil bro";
-    let isAlive = false;
+    isAlive = false;
+  }
+
+  sumEl.textContent = `Sum: ${sum}`;
+  cardsEl.textContent = `Cards: `;
+
+  for (let i = 0; i < cards.length; i++) {
+    cardsEl.textContent += ` ${cards[i]}`;
   }
   messageEl.textContent = message;
-  sumEl.textContent = `Sum: ${sum}`;
-  cardsEl.textContent = `Cards: ${cards[0]} & ${cards[1]}`;
 }
 
 function newCard() {
-  let card = 2;
+  let card = getRandomCard();
   sum += card;
   cards.push(card);
   renderGame();
