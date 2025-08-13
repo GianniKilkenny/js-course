@@ -17,6 +17,12 @@ p {
   color: pink;
 }
 
+.buttons-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 button {
   width: 150px;
   color: pink;
@@ -25,8 +31,10 @@ button {
   padding: 7px;
   font-weight: 800;
   border-radius: 3px;
+  margin: 2px;
 }
 button:hover {
   color: black;
   background-color: pink;
+  cursor: pointer;
 }

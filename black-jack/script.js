@@ -1,15 +1,20 @@
-let firstCard = 11;
-let secondCard = 11;
+let firstCard = 10;
+let secondCard = 9;
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
 let message = "";
+let cards = [firstCard, secondCard]; //ordered list of items
 
 messageEl = document.getElementById("message-el");
 sumEl = document.getElementById("sum-el");
 cardsEl = document.getElementById("cards-el");
 
 function startGame() {
+  renderGame();
+}
+
+function renderGame() {
   if (sum <= 20) {
     message = "do you want to draw a new card lil bro?";
   } else if (sum === 21) {
@@ -21,15 +26,12 @@ function startGame() {
   }
   messageEl.textContent = message;
   sumEl.textContent = `Sum: ${sum}`;
-  cardsEl.textContent = `Cards: ${firstCard} & ${secondCard}`;
+  cardsEl.textContent = `Cards: ${cards[0]} & ${cards[1]}`;
 }
 
-// let age = 100;
-
-// if (age < 100) {
-//   console.log("You still a youngin");
-// } else if (age === 100) {
-//   console.log("Here is your bitrthday card from the King!");
-// } else {
-//   console.log("Man stop cappin you already got the shit you old ass mf");
-// }
+function newCard() {
+  let card = 2;
+  sum += card;
+  cards.push(card);
+  renderGame();
+}

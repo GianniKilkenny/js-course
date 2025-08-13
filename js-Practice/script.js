@@ -52,26 +52,43 @@
 //   errorMessage.textContent = "Something went wrong, please try again";
 // }
 
-let num1 = 8;
-let num2 = 2;
-let sum = 0;
+// let num1 = 8;
+// let num2 = 2;
+// let sum = 0;
 
-document.getElementById("num1").textContent = num1;
-document.getElementById("num2").textContent = num2;
+// document.getElementById("num1").textContent = num1;
+// document.getElementById("num2").textContent = num2;
 
-function add() {
-  sum = num1 + num2;
-  document.getElementById("sum-0").textContent = `Sum: ${sum}`;
-}
-function subtract() {
-  sum = num1 - num2;
-  document.getElementById("sum-0").textContent = `Sum: ${sum}`;
-}
-function multiply() {
-  sum = num1 * num2;
-  document.getElementById("sum-0").textContent = `Sum: ${sum}`;
-}
-function divide() {
-  sum = num1 / num2;
-  document.getElementById("sum-0").textContent = `Sum: ${sum}`;
+// function add() {
+//   sum = num1 + num2;
+//   document.getElementById("sum-0").textContent = `Sum: ${sum}`;
+// }
+// function subtract() {
+//   sum = num1 - num2;
+//   document.getElementById("sum-0").textContent = `Sum: ${sum}`;
+// }
+// function multiply() {
+//   sum = num1 * num2;
+//   document.getElementById("sum-0").textContent = `Sum: ${sum}`;
+// }
+// function divide() {
+//   sum = num1 / num2;
+//   document.getElementById("sum-0").textContent = `Sum: ${sum}`;
+// }
+
+// for (let i = 0; i < 5; i += 1) {
+//   console.log(i);
+// }
+
+// let cards = [7, 3, 9];
+
+// for (let i = 0; i < cards.length; i++) {
+//   console.log(cards[i]);
+// }
+
+let sentence = ["Hello", "my", "name", "is", "Gianni"];
+let greetingEl = document.getElementById("greeting-el");
+
+for (let i = 0; i < sentence.length; i++) {
+  greetingEl.textContent += ` ${sentence[i]}`;
 }
