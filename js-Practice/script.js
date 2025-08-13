@@ -130,22 +130,46 @@
 
 // console.log(rollDice());
 
-let hasCompletedCourse = true;
-let giversCertificate = true;
+// let hasCompletedCourse = true;
+// let giversCertificate = true;
 
-if (hasCompletedCourse && giversCertificate) {
-  generateCertificate();
-}
+// if (hasCompletedCourse && giversCertificate) {
+//   generateCertificate();
+// }
 
-function generateCertificate() {
-  console.log("Generating certificate....");
-}
+// function generateCertificate() {
+//   console.log("Generating certificate....");
+// }
 
-let hasSolvedChallenge = true;
-let hasHintsLeft = false;
-function showSolution() {
-  console.log("Showing the solution...");
-}
-if (hasSolvedChallenge || hasHintsLeft) {
-  showSolution();
-}
+// let hasSolvedChallenge = true;
+// let hasHintsLeft = false;
+// function showSolution() {
+//   console.log("Showing the solution...");
+// }
+// if (hasSolvedChallenge || hasHintsLeft) {
+//   showSolution();
+// }
+
+let course = {
+  title: "Learn CSS Grid for free",
+  lessons: 16,
+  creator: "Gianni Kilkenny",
+  length: 63,
+  level: 2,
+  isFree: true,
+  tags: ["html", "css"],
+};
+
+console.log(course["tags"]);
+
+let airbnb = {
+  title: "Castle",
+  price: 150,
+  bedrooms: 6,
+  bathrooms: 7,
+  squarefeet: 7600,
+  inRange: true,
+  colors: ["black", "grey", "white", "red"],
+};
+
+console.log(`$${airbnb.price} & ${airbnb.squarefeet}sqrft`);
