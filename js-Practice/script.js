@@ -150,26 +150,98 @@
 //   showSolution();
 // }
 
-let course = {
-  title: "Learn CSS Grid for free",
-  lessons: 16,
-  creator: "Gianni Kilkenny",
-  length: 63,
-  level: 2,
-  isFree: true,
-  tags: ["html", "css"],
-};
+// let course = {
+//   title: "Learn CSS Grid for free",
+//   lessons: 16,
+//   creator: "Gianni Kilkenny",
+//   length: 63,
+//   level: 2,
+//   isFree: true,
+//   tags: ["html", "css"],
+// };
 
-console.log(course["tags"]);
+// console.log(course["tags"]);
 
-let airbnb = {
-  title: "Castle",
-  price: 150,
-  bedrooms: 6,
-  bathrooms: 7,
-  squarefeet: 7600,
-  inRange: true,
-  colors: ["black", "grey", "white", "red"],
-};
+// let airbnb = {
+//   title: "Castle",
+//   price: 150,
+//   bedrooms: 6,
+//   bathrooms: 7,
+//   squarefeet: 7600,
+//   inRange: true,
+//   colors: ["black", "grey", "white", "red"],
+// };
 
-console.log(`$${airbnb.price} & ${airbnb.squarefeet}sqrft`);
+// console.log(`$${airbnb.price} & ${airbnb.squarefeet}sqrft`);
+
+// let person = {
+//   name: "Gianni",
+//   age: 21,
+//   country: "USA",
+// };
+
+// function logData() {
+//   console.log(
+//     `${person.name} is ${person.age} years old and lives in ${person.country}`
+//   );
+// }
+
+// logData();
+
+// let age = 67;
+// if (age < 6) {
+//   console.log("Your get in for free");
+// } else if (age > 6 && age < 18) {
+//   console.log("You get the children discount");
+// } else if (age > 17 && age < 27) {
+//   console.log("You get the student price");
+// } else if (age >= 27 && age <= 66) {
+//   console.log("Sorry there will be no discount for you buddy");
+// } else {
+//   console.log("You get the senoir citizen discount fasho OG");
+// }
+
+// let largeCountries = ["Tuvalu", "India", "USA", "Indonesia", "Monaco"];
+
+// function loop() {
+//   for (let i = 0; i < largeCountries.length; i++) {
+//     console.log(`- ${largeCountries[i]}`);
+//   }
+// }
+
+// largeCountries.pop();
+// largeCountries.push("Pakistan");
+// largeCountries.shift();
+// largeCountries.unshift("China");
+
+// loop();
+
+// let dayOfMonth = 13;
+// let weekday = "friday";
+
+// if (dayOfMonth === 13 && weekday.toLocaleLowerCase() === "friday") {
+//   console.log("It is friday the 13th");
+// }
+// let hands = ["rock", "paper", "scissors"];
+
+// function game() {
+//   let randomNumber = Math.floor(Math.random() * 3);
+//   console.log(`${hands[randomNumber]}`);
+// }
+
+// game();
+
+let fruits = ["apple", "orange", "apple", "apple", "orange"];
+let appleShelf = document.getElementById("apple-shelf");
+let orangeShelf = document.getElementById("orange-shelf");
+
+function shelf() {
+  for (let i = 0; i < fruits.length; i++) {
+    if (fruits[i] === "apple") {
+      appleShelf.textContent += ` ${fruits[i]}`;
+    } else {
+      orangeShelf.textContent += ` ${fruits[i]}`;
+    }
+  }
+}
+shelf();
