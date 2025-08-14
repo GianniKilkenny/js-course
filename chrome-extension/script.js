@@ -1,4 +1,21 @@
-let inputBtn = document.getElementById("input-btn");
-inputBtn.addEventListener("click", function () {
-  console.log("Button clicked from addEvent Listener");
+let myLeads = [];
+const inputEl = document.getElementById("input-el");
+const inputBtn = document.getElementById("input-btn");
+const ulEL = document.getElementById("ul-el");
+
+inputBtn.addEventListener("click", () => {
+  myLeads.push(inputEl.value);
+  inputEl.value = "";
+  renderLeads();
 });
+
+function renderLeads() {
+  let listItems = "";
+  for (let i = 0; i < myLeads.length; i++) {
+    listItems += `<li>${myLeads[i]}</li>`;
+    //   const li = document.createElement("li");
+    //   li.textContent = myLeads[i];
+    //   ulEL.appendChild(li);
+  }
+  ulEL.innerHTML = listItems;
+}

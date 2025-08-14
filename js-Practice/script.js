@@ -231,17 +231,31 @@
 
 // game();
 
-let fruits = ["apple", "orange", "apple", "apple", "orange"];
-let appleShelf = document.getElementById("apple-shelf");
-let orangeShelf = document.getElementById("orange-shelf");
+// let fruits = ["apple", "orange", "apple", "apple", "orange"];
+// let appleShelf = document.getElementById("apple-shelf");
+// let orangeShelf = document.getElementById("orange-shelf");
 
-function shelf() {
-  for (let i = 0; i < fruits.length; i++) {
-    if (fruits[i] === "apple") {
-      appleShelf.textContent += ` ${fruits[i]}`;
-    } else {
-      orangeShelf.textContent += ` ${fruits[i]}`;
-    }
-  }
+// function shelf() {
+//   for (let i = 0; i < fruits.length; i++) {
+//     if (fruits[i] === "apple") {
+//       appleShelf.textContent += ` ${fruits[i]}`;
+//     } else {
+//       orangeShelf.textContent += ` ${fruits[i]}`;
+//     }
+//   }
+// }
+// shelf();
+
+// openBox = document
+//   .getElementById("box")
+//   .addEventListener("click", function openBox() {
+//     console.log("I want to open the box");
+//   });
+
+buyButton = document.getElementById("container");
+
+buyButton.innerHTML = "<button onclick = 'buy()'> Buy! </button>";
+
+function buy() {
+  buyButton.innerHTML += "<p>Thank you for buying!</p>";
 }
-shelf();
