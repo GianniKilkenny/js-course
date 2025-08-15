@@ -252,10 +252,31 @@
 //     console.log("I want to open the box");
 //   });
 
-buyButton = document.getElementById("container");
+// buyButton = document.getElementById("container");
 
-buyButton.innerHTML = "<button onclick = 'buy()'> Buy! </button>";
+// buyButton.innerHTML = "<button onclick = 'buy()'> Buy! </button>";
 
-function buy() {
-  buyButton.innerHTML += "<p>Thank you for buying!</p>";
+// function buy() {
+//   buyButton.innerHTML += "<p>Thank you for buying!</p>";
+// }
+
+const welcomeEl = document.getElementById("welcome-el");
+
+function greetUser(greeting, name, emoji) {
+  welcomeEl.textContent = `${greeting}, ${name} ${emoji}`;
 }
+
+greetUser("Howdy", "seth", "💩");
+
+function add(num1, num2) {
+  return num1 + num2;
+}
+
+console.log(add(3, 4));
+console.log(add(9, 102));
+
+function getfirst(arr) {
+  console.log(arr[0]);
+}
+fruits = ["apples", "bananas"];
+getfirst(fruits);
